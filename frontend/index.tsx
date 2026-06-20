@@ -28,6 +28,8 @@ import {
   Github
 } from "lucide-react";
 
+const API_BASE_URL = "http://localhost:8080";
+
 // --- Types ---
 
 type Page = 'home' | 'analyze' | 'how-it-works' | 'use-cases' | 'about';
@@ -521,7 +523,7 @@ const AnalyzePage = () => {
       const formData = new FormData();
       formData.append('video', deepfakeFile);
       
-      const response = await fetch('http://localhost:8080/analyze/deepfake', {
+      const response = await fetch(`${API_BASE_URL}/analyze/deepfake`, {
         method: 'POST',
         body: formData,
       });
@@ -555,7 +557,7 @@ const AnalyzePage = () => {
       const formData = new FormData();
       formData.append('video', syntheticFile);
       
-      const response = await fetch('http://localhost:8080/analyze/synthetic', {
+      const response = await fetch(`${API_BASE_URL}/analyze/synthetic`, {
         method: 'POST',
         body: formData,
       });
@@ -590,7 +592,7 @@ const AnalyzePage = () => {
       formData.append('video', contextFile);
       formData.append('claim', contextClaim);
       
-      const response = await fetch('http://localhost:8080/analyze/context', {
+      const response = await fetch(`${API_BASE_URL}/analyze/context`, {
         method: 'POST',
         body: formData,
       });
