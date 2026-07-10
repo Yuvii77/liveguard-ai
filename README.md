@@ -25,7 +25,7 @@ The platform performs multiple layers of verification to help users assess the a
 
 ### Frontend
 
-**liveguard-ai.vercel.app**
+**https://liveguard-ai.vercel.app**
 
 ### Spring Boot Backend
 
