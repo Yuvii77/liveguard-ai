@@ -28,8 +28,7 @@ import {
   Github
 } from "lucide-react";
 
-const API_BASE_URL = "http://localhost:8080";
-
+const API_BASE_URL = "https://liveguard-backend-2.onrender.com";
 // --- Types ---
 
 type Page = 'home' | 'analyze' | 'how-it-works' | 'use-cases' | 'about';
